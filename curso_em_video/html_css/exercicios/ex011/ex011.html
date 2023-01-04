@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <!--Imagem dinâmica, carrega uma imagem conforme o tamanho da tela.-->
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!--Somente arquivo MP3, caso o navegador não seja compatível com MP3, o arquivo não é carregado.-->
+    <audio src="midia/God Rest Ye Merry Gentlmen - DJ Williams.mp3" controls autoplay></audio>
+    <!--Caso queira garantir que o navegador carregue o áudio, deve fazer como abaixo, nos formatos MP3, WAV e OGG-->
+    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/God Rest Ye Merry Gentlmen - DJ Williams.mp3" type="audio/mpge">
+        <source src="midia/God Rest Ye Merry Gentlmen - DJ Williams.wav" type="audio/wav">
+        <source src="midia/God Rest Ye Merry Gentlmen - DJ Williams.ogg" type="audio/ogg">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/God Rest Ye Merry Gentlmen - DJ Williams.mp3">Clique aqui para baixar o arquivo MP3.</a></p>
+    </audio>
+</body>
+</html>

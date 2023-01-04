@@ -1,0 +1,3 @@
+In Python we can make anything.
+In Python we can make great algorithms.
+In Python we can process big contents of data.

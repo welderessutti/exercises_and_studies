@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 320px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        img {
+            width: 100%; /* A imagem se mantém com 100% do tamanho dentro do block. A imagem vai ficar maior quando atingir o max-width do picture, (responsividade) se comparado sem utilizar essa propriedade. */
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione voluptas minus dolores nulla ipsa rerum quo corrupti odit, minima fugiat? Neque atque ullam veniam dolore natus cumque voluptatibus cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci cumque velit recusandae optio! Debitis repellat consequuntur tenetur autem amet, reiciendis magnam fugit iure tempore sint cumque a cum ab aperiam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, accusamus ab. Incidunt consectetur tempore quasi ratione numquam velit, totam, fuga aliquid at quibusdam nobis facere cupiditate deleniti modi saepe fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quasi eius, velit omnis accusamus quaerat tenetur amet similique facere error, ipsum consectetur ipsa esse minus sapiente voluptatum modi recusandae excepturi.</p>
+        <picture>
+            <source media="(max-width: 850px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="Irina Block">
+        </picture>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ratione voluptas minus dolores nulla ipsa rerum quo corrupti odit, minima fugiat? Neque atque ullam veniam dolore natus cumque voluptatibus cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci cumque velit recusandae optio! Debitis repellat consequuntur tenetur autem amet, reiciendis magnam fugit iure tempore sint cumque a cum ab aperiam! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum, accusamus ab. Incidunt consectetur tempore quasi ratione numquam velit, totam, fuga aliquid at quibusdam nobis facere cupiditate deleniti modi saepe fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quasi eius, velit omnis accusamus quaerat tenetur amet similique facere error, ipsum consectetur ipsa esse minus sapiente voluptatum modi recusandae excepturi.</p>
+    </main>
+</body>
+</html>
