@@ -1,85 +1,99 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte01: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte02: 'Passion One', cursive;
+    --fonte03: 'Sriracha', cursive;
+}
+
 * {
     margin: 0px;
     padding: 0px;
-    border: 0px;
-    outline: 0px;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte01);
 }
 
 header {
-    height: 100px;
-    padding: 20px;
+    font-size: 3vw;
     background-color: black;
     color: white;
-    font-variant: small-caps;
     text-align: center
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-    font-variant: normal;
-    font-size: small;
+header h1 {
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte02);
+    font-size: 10vw;
 }
 
-header a:hover {
+header p {
+    padding-bottom: 50px;
+}
+
+header a, footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
-header a:visited {
-    color: white;
-}
-
 section {
-    padding: 30px;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 3.5vw;
+    font-family: var(--fonte03);
+    font-size: 3.5vw;
 }
 
 section p {
-    max-width: 250px;
-    padding: 20px;
-    line-height: 2.5em;
-    text-align: left;
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
 }
 
 section.imagem {
+    color: white;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    box-shadow:  inset 0px 0px 5px 2px rgba(0, 0, 0, 0.479);
-}
-
-section.imagem#joana {
-    background-image: url("../imagens/background001.jpg");
-}
-
-section.imagem#papel {
-    background-image: url("../imagens/background002.jpg");
+    box-shadow:  inset 6px 6px 13px 0px rgba(0, 0, 0, 0.479);
 }
 
 section.imagem p {
-    color: white;
+    padding: 5px;
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.308);
+    text-shadow: 1px 1px 0px black;
+}
+
+section.imagem#img01 {
+    background-image: url("../imagens/background001.jpg");
+}
+
+section.imagem#img02 {
+    background-image: url("../imagens/background002.jpg");
 }
 
 footer {
-    padding: 5px;
+    padding: 10px;
+    color: white;
     background-color: black;
-    color: white;
     text-align: center;
-    font-size: 0.5em;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer a:visited {
-    color: white;
+    font-size: 1.5vw;
 }
