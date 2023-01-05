@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+}
+
+header {
+    height: 100px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-variant: small-caps;
+    text-align: center
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-variant: normal;
+    font-size: small;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header a:visited {
+    color: white;
+}
+
+section {
+    padding: 30px;
+}
+
+section p {
+    max-width: 250px;
+    padding: 20px;
+    line-height: 2.5em;
+    text-align: left;
+}
+
+section.imagem {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow:  inset 0px 0px 5px 2px rgba(0, 0, 0, 0.479);
+}
+
+section.imagem#joana {
+    background-image: url("../imagens/background001.jpg");
+}
+
+section.imagem#papel {
+    background-image: url("../imagens/background002.jpg");
+}
+
+section.imagem p {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.308);
+}
+
+footer {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 0.5em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: white;
+}
