@@ -13,11 +13,33 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        thead tr th {
+            position: sticky;
+            top: 0px;
+            background-color: gray;
         }
 
         thead, tfoot {
             background-color: gray;
             color: white;
+        }
+
+        tbody tr:nth-child(1n) {
+            background-color: white;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: lightgray;
         }
 
         th, td {
@@ -36,6 +58,7 @@
         HIERARQUIA DE TABELAS
 
         table
+            caption (legenda)
             thead
                 tr = table row
                     th = table head
@@ -59,10 +82,11 @@
     * Sempre que o conteúdo da célula for um título, deve-se usar a tag <th>.
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th> <!-- scope="col" = É um título da coluna -->
+                <th scope="col" style="width: 50px;">População</th> <!-- scope="col" = É um título da coluna -->
             </tr>
         </thead>
         <tbody>
@@ -177,7 +201,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th> <!-- scope="row" = É um título da linha -->
                 <td class="num"><strong>207.750.291</strong></td>
             </tr>
         </tfoot>
