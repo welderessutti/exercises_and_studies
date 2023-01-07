@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative</title>
+    <style>
+        
+        /* Position Relative manipula a posição do elemento referente ao seu posicionamento. Seja com display block ou inline-block. */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .red {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            display: inline-block;
+        }
+
+        .blue {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: relative;
+            left: 200px;
+            display: inline-block;
+        }
+
+        .yellow {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: relative;
+            left: 400px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+</body>
+</html>

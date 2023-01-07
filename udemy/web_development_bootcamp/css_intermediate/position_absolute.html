@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+    <style>
+
+        /* Position Absolute manipula a posição do elemento referente ao elemento "pai". Ele fica livre e perde a propriedade de display, nao é inline nem block. */
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .red {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: absolute;
+            top: 400px;
+            left: 400px;
+        }
+
+        .blue {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+
+        .yellow {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="yellow"></div>
+</body>
+</html>
