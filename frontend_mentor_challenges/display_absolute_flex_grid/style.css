@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+/* Remembering, to use the Flex or Grid display, you must define the width and height of the container. */
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    background-color: lightgrey;
+}
+
+/* Position Relative - only the element receives "position relative". */
+
+.container1 {
+    width: 300px;
+    height: 300px;
+    background-color: lightyellow;
+}
+
+.element1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    background-color: black;
+}
+
+/* Position Absolute - both receives the position method. The container receives "position relative" and the element receives "position absolute".  */
+
+.container2 {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: lightblue;
+}
+
+.element2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    background-color: black;
+}
+
+/* Display Flex - only the container receives "display flex". */
+
+.container3 {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+}
+
+.element3 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+/* Display Grid - only the container receives "display grid". */
+
+.container4 {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    background-color: lightcoral;
+}
+
+.element4 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
