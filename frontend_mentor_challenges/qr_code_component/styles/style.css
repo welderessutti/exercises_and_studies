@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(212, 45%, 89%);
+    font-family: 'Outfit', sans-serif;
+    /* Com display grid, usar "place-items: center;" */
+}
+
+.container {
+    max-width: 300px;
+    height: 485px;
+    padding: 15px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+.qrcode {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.text {
+    max-width: 280px;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+    color: hsl(220, 15%, 55%);
+}
