@@ -13,7 +13,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 section {
@@ -77,6 +76,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0);
     color: hsla(0, 0%, 100%, 0.75);
     border: 0.2em solid hsl(0, 0%, 95%);
+    cursor: pointer;
 }
 
 .attribution {
@@ -87,4 +87,22 @@ button:hover {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        padding: 5rem;
+    }
+
+    main {
+        flex-flow: column;
+    }
+
+    .sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+    }
 }
