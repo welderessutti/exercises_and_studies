@@ -6,13 +6,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: hsl(0, 0%, 95%);
-}
-
-main {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+main {
+    width: 56rem;
+    display: flex;
 }
 
 section {
@@ -33,10 +36,11 @@ section {
     border-radius: 0 0.5rem 0.5rem 0;
 }
 
-section h1 {
+section h2 {
     font-family: 'Big Shoulders Display', cursive;
     font-weight: 700;
     font-size: 2.5rem;
+    text-transform: uppercase;
     color: hsl(0, 0%, 95%);
 }
 
@@ -60,15 +64,15 @@ button {
     border-radius: 1.5rem;
 }
 
-.sedans > button {
+.sedans button {
     color: hsl(31, 77%, 52%);
 }
 
-.suvs > button {
+.suvs button {
     color: hsl(184, 100%, 22%);
 }
 
-.luxury > button {
+.luxury button {
     color: hsl(179, 100%, 13%);
 }
 
@@ -91,18 +95,19 @@ button:hover {
 
 @media screen and (max-width: 950px) {
     body {
-        padding: 5rem;
+        padding: 5em 0 5em 0;
     }
 
     main {
-        flex-flow: column;
+        max-width: 400px;
+        flex-direction: column;
     }
 
     .sedans {
-        border-radius: 0.5rem 0.5rem 0 0;
+        border-radius: 0.5em 0.5em 0 0;
     }
 
     .luxury {
-        border-radius: 0 0 0.5rem 0.5rem;
+        border-radius: 0 0 0.5em 0.5em;
     }
 }
