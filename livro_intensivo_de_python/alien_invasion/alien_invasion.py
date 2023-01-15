@@ -2,6 +2,7 @@ import pygame
 from pygame.sprite import Group
 from settings import Settings
 from ship import Ship
+from alien import Alien
 import game_functions as gf
 
 
@@ -15,6 +16,8 @@ def run_game():
     ship = Ship(ai_settings, screen)
     # Creates a group that will store the bullets.
     bullets = Group()
+    # Creates an Alien.
+    alien = Alien(ai_settings, screen)
     # Starts the main loop of the game.
     while True:
         # Observes keybord and mouse events.
@@ -22,7 +25,7 @@ def run_game():
         ship.update()
         gf.update_bullets(bullets)
         # Redraws the screen on each pass through the loop and makes the most recent screen visible.
-        gf.update_screen(ai_settings, screen, ship, bullets)
+        gf.update_screen(ai_settings, screen, ship, alien, bullets)
 
 
 run_game()
