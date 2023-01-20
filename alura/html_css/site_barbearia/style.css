@@ -1,3 +1,7 @@
+body {
+    font-family: 'Montserrat', sans-serif;;
+}
+
 header {
     background-color: #BBBBBB;
     padding: 20px 0;
@@ -91,11 +95,6 @@ footer {
     margin: 20px;
 }
 
-main {
-    width: 940px;
-    margin: 0 auto;
-}
-
 form {
     margin: 40px 0;
 }
@@ -153,3 +152,136 @@ td, th {
 tfoot td {
     text-align: center;
 }
+
+/* css da página inicial */
+
+.banner {
+    width: 100%;   
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.principal p {
+    margin: 0 0 1em;
+}
+
+.principal strong {
+    font-weight: bold;
+}
+
+.principal em {
+    font-style: italic;
+}
+
+.utensilios {
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.beneficios {
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5em;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens::before {
+    content: "\066D";
+    font-size: 1.5em;
+}
+
+.imagem-beneficios {
+    width: 60%;
+}
+
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+/*
+
+x y {
+    seleciona todos os "y" (filho e não-filho) dentro do "x" (pai).
+}
+
+x > y {
+    seleciona somente os "y" (filho) diretamente após o "x" (pai).
+}
+
+w + z {
+    seleciona somente o primeiro "z" (irmão) após o "w".
+}
+
+w ~ z {
+    seleciona todos os "z" (irmão) após o "w".
+}
+
+p:not(#id ou .class) {
+    seleciona somente os "p" que não possuem a #id ou .class específica.
+}
+
+*/
+
+/*
+
+<section> - (pai de <h1> e <p>)
+
+    <h1></h1> - (filho direto de <section>)
+
+    <p></p> - (filho direto de <section> e irmão de <h1>)
+
+</section>
+
+*/
+
+/*
+
+width: calc(400% - 25px) - calcula o tamanho, exemplo.
+
+*/
