@@ -201,6 +201,11 @@ tfoot td {
     margin: 0 auto;
 }
 
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
 .beneficios {
     padding: 3em 0;
     background: #888888;
@@ -232,16 +237,36 @@ tfoot td {
 
 .imagem-beneficios {
     width: 60%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px black;
 }
 
-.mapa p {
-    margin: 0 0 2em;
-    text-align: center;
+.imagem-beneficios:hover {
+    opacity: 0.3;
 }
 
 .video {
     width: 560px;
     margin: 2em auto;
+}
+
+@media screen and (max-width: 480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+    .lista-beneficios, .imagem-beneficios {
+        width: 100%;
+    }
 }
 
 /*
