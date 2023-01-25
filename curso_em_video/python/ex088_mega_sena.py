@@ -1,5 +1,6 @@
 import random
 from time import sleep
+
 # Gerador de jogos com range do "randint":
 lista = []
 
