@@ -29,5 +29,6 @@ public class Escolha
 	    	default:
 	    		System.out.println("Dia inválido");
 	    }
+		entrada.close();
 	}
 }

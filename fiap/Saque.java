@@ -20,5 +20,6 @@ public class Saque {
 		  System.out.println("Quantidade das cédulas 50: " + ced50);
 	  System.out.println("Quantidade das cédulas 20: " + ced20);
 	  System.out.println("Quantidade das cédulas 10: " + ced10);
+	  entrada.close();
     }
 }

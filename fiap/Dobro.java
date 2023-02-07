@@ -11,6 +11,6 @@ public class Dobro {
         num = entrada.nextInt();
         dobro = num + num;
         System.out.print("Dobro = " + dobro);
+        entrada.close();
     }
-    
 }

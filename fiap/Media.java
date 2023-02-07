@@ -16,5 +16,6 @@ public class Media {
 		// Calcula a média dos 4 números
 		media = (n1 + n2 + n3 + n4) / 4;
 		System.out.println("Média = " +  media);
+		entrada.close();
 	}
 }
