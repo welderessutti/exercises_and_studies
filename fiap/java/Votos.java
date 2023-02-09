@@ -1,4 +1,4 @@
-package fiap;
+package fiap.java;
 import java.util.Scanner;
 
 public class Votos {

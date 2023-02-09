@@ -1,4 +1,4 @@
-package fiap;
+package fiap.java;
 
 public class Teste {
 
