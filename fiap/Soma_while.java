@@ -11,7 +11,7 @@ public class Soma_while {
 
 		System.out.println("Digite 0 para finalizar: ");
 
-		while(num != 0){
+		while(num != 0) {
 			System.out.println("Digite um numero: ");
 			num = teclado.nextFloat();
 			soma += num; // equivale à soma = soma + 1
