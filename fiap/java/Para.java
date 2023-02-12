@@ -16,5 +16,6 @@ public class Para {
 		}
 		
 		System.out.println("Somatória = " + soma);
+		teclado.close();
 	}
 }
