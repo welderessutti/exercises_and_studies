@@ -1,7 +1,8 @@
+import requests
 from acesso_cep import BuscaEndereco
 
-cep = 13333070
+meu_cep = "13333070"
+cep_obj = BuscaEndereco(meu_cep)
 
-meu_cep = BuscaEndereco(cep)
-
-print(meu_cep)
+cep_arq = cep_obj.acessa_via_cep()
+print(cep_arq)
