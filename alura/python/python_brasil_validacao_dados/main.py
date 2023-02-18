@@ -1,10 +1,7 @@
-from cpf_cnpj import Documento
+from acesso_cep import BuscaEndereco
 
-aaa = 54127188000162
-bbb = 38826187878
+cep = 13333070
 
-cnpj_teste = Documento.cria_documento(aaa)
-cpf_teste = Documento.cria_documento(bbb)
+meu_cep = BuscaEndereco(cep)
 
-print(cnpj_teste)
-print(cpf_teste)
+print(meu_cep)
