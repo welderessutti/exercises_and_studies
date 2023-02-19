@@ -1,5 +1,5 @@
 from bytebank import Funcionario
 
-welder = Funcionario("Welder", "05/09/1988", 1111)
+welder = Funcionario("Welder", "05/09/1988", 1000)
 
-print(welder.idade())
+print(welder.calcular_bonus())
