@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BankSystem {
     
-    /*public static void registerPerson() {
+    public static void registerPerson() {
         
         Scanner input = new Scanner(System.in);
         
@@ -20,10 +20,39 @@ public class BankSystem {
         System.out.print("CPF: ");
         String cpf = input.nextLine();
         
-        PersonalData welder = new PersonalData(firstName, lastName, dateOfBirth, cpf);
-    }*/
+        PersonalData welder = new PersonalData(
+                firstName, lastName, dateOfBirth, cpf);
+        
+        createAccount(welder);
+    }
     
-    public static void menu() {
+    public static void createAccount(PersonalData person) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Bank: ");
+        int bank = input.nextInt();
+        
+        System.out.println("Agency: ");
+        int agency = input.nextInt();
+        
+        System.out.println("Checking Account: ");
+        int checkingAccount = input.nextInt();
+        
+        System.out.println("Balance: ");
+        int balance = input.nextInt();
+        
+        System.out.println("Credit: ");
+        int credit = input.nextInt();
+        
+        System.out.println("Password: ");
+        int password = input.nextInt();
+        
+        BankAccount account = new BankAccount(bank, agency, checkingAccount,
+            balance, credit, password, person);
+    }
+    
+    public static boolean menu(boolean flag) {
         
         Scanner input = new Scanner(System.in);
         
@@ -56,13 +85,20 @@ public class BankSystem {
             case 7:
                 break;
             case 0:
+                flag = false;
                 break;
             default:
                 System.out.println("Invalid Option!");
         }
+        return flag;
     }
 
     public static void main(String[] args) {
-        menu();
+        
+        boolean flag = true;
+        
+        while (flag) {
+            flag = menu(flag);
+        }
     }
 }

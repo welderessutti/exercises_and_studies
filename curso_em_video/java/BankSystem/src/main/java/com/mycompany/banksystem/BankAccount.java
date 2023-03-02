@@ -15,8 +15,7 @@ public class BankAccount {
     public BankAccount(
             int bank, int agency, int checkingAccount,
             int balance, int credit, int password,
-            String firstName, String lastName,
-            String dateOfBirth, String cpf
+            PersonalData data
             )
     {
         this.bank = bank;
@@ -24,7 +23,7 @@ public class BankAccount {
         this.chekingAccount = checkingAccount;
         this.balance = balance;
         this.credit = credit;
-        this.data = new PersonalData(firstName, lastName, dateOfBirth, cpf);
+        this.data = data;
         this.password = password;
     }
     
