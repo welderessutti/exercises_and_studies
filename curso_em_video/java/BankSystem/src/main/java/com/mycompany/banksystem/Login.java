@@ -20,7 +20,7 @@ public class Login {
         System.out.println("Digit your checking account number: ");
         userChekingAccount = input.nextInt();
         
-        if (findAccount(userAgency, userChekingAccount)) {
+        if (findLoginAccount(userAgency, userChekingAccount)) {
             
             System.out.println("Digit your password: ");
             userPassword = input.nextInt();
@@ -40,16 +40,18 @@ public class Login {
         }
     }
     
-    public static boolean findAccount(int userAgency, int userChekingAccount) {
+    public static boolean findLoginAccount(int userAgency, int userChekingAccount) {
         
         for (int count = 0; count < accountsList.length; count++) {  
             
-            if (userAgency == accountsList[count].getAgency() && 
-                    userChekingAccount == accountsList[count].getCheckingAccount()) 
-            {
-                userIndex = count;
-                return true;
+            if (accountsList[count] != null) {
+                if (userAgency == accountsList[count].getAgency()
+                        && userChekingAccount == accountsList[count].getCheckingAccount()) {
+                    userIndex = count;  // TESTAR FAZENDO A VARIÁVEL "USERINDEX" RECEBENDO O OBJETO, E NÃO SOMENTE O ÍNDICE.
+                    return true;
+                }
             }
+
         }
         return false;
     }

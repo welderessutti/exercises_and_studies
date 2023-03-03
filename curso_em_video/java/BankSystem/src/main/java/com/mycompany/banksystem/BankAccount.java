@@ -87,31 +87,4 @@ public class BankAccount {
     public int getPassword() {
         return this.password;
     }
-
-    // METHODS:
-    public boolean checkFund(int amount) {
-        return amount <= this.fund;
-    }
-    
-    public void deposit(int amount) {
-        this.fund += amount;
-    }
-    
-    public boolean withdraw(int amount) {
-        if (checkFund(amount)) {
-            this.fund -= amount;
-            return true;
-        } else {
-            System.out.println(
-                    "Sorry, there aren´t enough funds for this amount."
-            );
-            return false;
-        }
-    }
-    
-    public void transfer(int amount, BankAccount account) {
-        if (withdraw(amount)) {
-            account.deposit(amount);
-        }
-    }
 }

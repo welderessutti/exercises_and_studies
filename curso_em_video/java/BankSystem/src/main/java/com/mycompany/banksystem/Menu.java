@@ -1,15 +1,20 @@
 package com.mycompany.banksystem;
 
+import static com.mycompany.banksystem.BankSystem.accountsList;
+import static com.mycompany.banksystem.Transaction.destinyIndex;
+import static com.mycompany.banksystem.Login.userIndex;
 import java.util.Scanner;
 
 public class Menu {
     
     public static CreateAccount newAccount = new CreateAccount();
     public static Login newLogin = new Login();
+    public static Transaction newTransaction = new Transaction();
     
     public boolean mainMenu(boolean flag) {
         
         boolean flag2 = true;
+        int option;
         Scanner input = new Scanner(System.in);
 
         System.out.println(
@@ -21,7 +26,7 @@ public class Menu {
               + "5 - DELETE ACCOUNT\n"
               + "0 - EXIT\n");
         System.out.print("Choose an option: ");
-        int option = input.nextInt();
+        option = input.nextInt();
 
         switch (option) {
             case 1:
@@ -50,7 +55,11 @@ public class Menu {
     }
     
     public boolean accountMenu(boolean flag2) {
-        
+
+        int destinyAgency;
+        int destinyCheckingAccount;
+        int amount;
+        int option;
         Scanner input = new Scanner(System.in);
 
         System.out.println(
@@ -61,14 +70,52 @@ public class Menu {
               + "4 - SHOW FUNDS\n"
               + "0 - EXIT\n");
         System.out.print("Choose an option: ");
-        int option = input.nextInt();
+        option = input.nextInt();
 
         switch (option) {
             case 1:
+                System.out.println("Agency: ");
+                destinyAgency = input.nextInt();
+                
+                System.out.println("Checking Account: ");
+                destinyCheckingAccount = input.nextInt();
+                
+                if (newTransaction.findDestinyAccount(destinyAgency, destinyCheckingAccount)) {                    
+                    
+                    System.out.println("Deposit amount: ");
+                    amount = input.nextInt();
+                    
+                    newTransaction.deposit(accountsList[destinyIndex], amount);
+                    
+                } else {
+                    System.out.println("Agency number or "
+                    + "checking account number ivalid.");
+                }                
                 break;
             case 2:
+                System.out.println(userIndex);
+                System.out.println("Withdraw Amount: ");
+                amount = input.nextInt();
+                newTransaction.withdraw(amount);
                 break;
             case 3:
+                System.out.println("Agency: ");
+                destinyAgency = input.nextInt();
+                
+                System.out.println("Checking Account: ");
+                destinyCheckingAccount = input.nextInt();
+                
+                if (newTransaction.findDestinyAccount(destinyAgency, destinyCheckingAccount)) {                    
+                    
+                    System.out.println("Tranfer amount: ");
+                    amount = input.nextInt();
+                    
+                    newTransaction.transfer(accountsList[destinyIndex], amount);
+                    
+                } else {
+                    System.out.println("Agency number or "
+                    + "checking account number ivalid.");
+                }
                 break;
             case 4:
                 break;
