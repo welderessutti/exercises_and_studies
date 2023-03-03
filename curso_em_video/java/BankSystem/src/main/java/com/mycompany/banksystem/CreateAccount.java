@@ -1,18 +1,15 @@
 package com.mycompany.banksystem;
 
+import static com.mycompany.banksystem.BankSystem.accountsList;
 import java.util.Scanner;
 
 public class CreateAccount {
     
     public static int blankIndex;
     
-    public static void creator() {
+    public void creator() {
 
-        if (fullListChecker()) {
-
-            System.out.println("List of account is full. Remove an account.");
-
-        } else {
+        if (findBlankIndex()) {
 
             Scanner input = new Scanner(System.in);
 
@@ -45,13 +42,20 @@ public class CreateAccount {
 
             System.out.println("Password: ");
             int password = input.nextInt();
+            
+            accountsList[blankIndex] = new BankAccount(bank, agency,
+            checkingAccount, fund, credit, password, firstName, lastName,
+            dateOfBirth, cpf);  
+            
+        } else {            
+            System.out.println("List of account is full. Remove an account.");
         }
     }
     
-    public static boolean fullListChecker() {
+    public static boolean findBlankIndex() {
 
-        for (int count = 0; count < BankSystem.accountsList.length; count++) {
-            if (BankSystem.accountsList[count] == null) {
+        for (int count = 0; count < accountsList.length; count++) {
+            if (accountsList[count] == null) {
                 blankIndex = count;
                 return true;
             }
