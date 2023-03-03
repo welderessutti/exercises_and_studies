@@ -6,7 +6,7 @@ public class BankAccount {
     private int bank;
     private int agency;
     private int chekingAccount;
-    private int balance;
+    private int fund;
     private int credit;
     private PersonalData data;
     private int password;
@@ -14,14 +14,14 @@ public class BankAccount {
     // CONSTRUCTOR:
     public BankAccount(
             int bank, int agency, int checkingAccount,
-            int balance, int credit, int password,
+            int fund, int credit, int password,
             PersonalData data
             )
     {
         this.bank = bank;
         this.agency = agency;
         this.chekingAccount = checkingAccount;
-        this.balance = balance;
+        this.fund = fund;
         this.credit = credit;
         this.data = data;
         this.password = password;
@@ -40,8 +40,8 @@ public class BankAccount {
         this.chekingAccount = checkingAccount;
     }
     
-    public void setBalance(int balance) {
-        this.balance = balance;
+    public void setFund(int fund) {
+        this.fund = fund;
     }
     
     public void setCredit(int credit) {
@@ -70,8 +70,8 @@ public class BankAccount {
         return this.chekingAccount;
     }
     
-    public int getBalance() {
-        return this.balance;
+    public int getFund() {
+        return this.fund;
     }
     
     public int getCredit() {
@@ -84,5 +84,32 @@ public class BankAccount {
     
     public int getPassword() {
         return this.password;
-    }    
+    }
+
+    // METHODS:
+    public boolean checkFund(int amount) {
+        return amount <= this.fund;
+    }
+    
+    public void deposit(int amount) {
+        this.fund += amount;
+    }
+    
+    public boolean withdraw(int amount) {
+        if (checkFund(amount)) {
+            this.fund -= amount;
+            return true;
+        } else {
+            System.out.println(
+                    "Sorry, there aren´t enough funds for this amount."
+            );
+            return false;
+        }
+    }
+    
+    public void transfer(int amount, BankAccount account) {
+        if (withdraw(amount)) {
+            account.deposit(amount);
+        }
+    }
 }

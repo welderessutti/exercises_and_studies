@@ -48,7 +48,7 @@ public class BankSystem {
         System.out.println("Password: ");
         int password = input.nextInt();
         
-        BankAccount account = new BankAccount(bank, agency, checkingAccount,
+        BankAccount welder = new BankAccount(bank, agency, checkingAccount,
             balance, credit, password, person);
     }
     
@@ -94,6 +94,8 @@ public class BankSystem {
     }
 
     public static void main(String[] args) {
+        
+        BankAccount[] accountsList = new BankAccount[10];
         
         boolean flag = true;
         
