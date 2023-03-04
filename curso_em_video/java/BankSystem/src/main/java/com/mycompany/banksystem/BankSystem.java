@@ -1,20 +1,18 @@
 package com.mycompany.banksystem;
 
-import static com.mycompany.banksystem.Login.userIndex;
+import java.util.ArrayList;
 
 public class BankSystem {
-    
-    public static BankAccount[] accountsList = new BankAccount[2];
+
+    public static ArrayList<BankAccount> accountsList = new ArrayList<>();
     public static Menu menuOptions = new Menu();
 
     public static void main(String[] args) {
-        
+
         boolean flag = true;
-        
+
         while (flag) {
             flag = menuOptions.mainMenu(flag);
         }
-        
-        System.out.println(accountsList[userIndex].getFund());
     }
 }

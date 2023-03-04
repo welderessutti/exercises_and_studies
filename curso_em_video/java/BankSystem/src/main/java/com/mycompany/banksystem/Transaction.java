@@ -1,26 +1,26 @@
 package com.mycompany.banksystem;
 
 import static com.mycompany.banksystem.BankSystem.accountsList;
-import static com.mycompany.banksystem.Login.userIndex;
+import static com.mycompany.banksystem.Login.userAccount;
 
 public class Transaction {
-    
-    public static int destinyIndex;
 
-    public boolean checkFund(int amount) {        
-        return amount <= accountsList[userIndex].getFund();
+    public static BankAccount destinyAccount;
+
+    public boolean checkFund(int amount) {
+        return amount <= userAccount.getFund();
     }
-    
+
     public void deposit(BankAccount destinyAccount, int depositAmount) {
         destinyAccount.setFund(destinyAccount.getFund() + depositAmount);
     }
-    
+
     public boolean withdraw(int withdrawAmount) {
 
-        if (checkFund(withdrawAmount)) {            
-            accountsList[userIndex].setFund(accountsList[userIndex].getFund() - withdrawAmount);
+        if (checkFund(withdrawAmount)) {
+            userAccount.setFund(userAccount.getFund() - withdrawAmount);
             return true;
-            
+
         } else {
             System.out.println(
                     "Sorry, there aren´t enough funds for this amount."
@@ -28,21 +28,21 @@ public class Transaction {
             return false;
         }
     }
-    
-    public void transfer(BankAccount destinyAccount, int transferAmount) {        
+
+    public void transfer(BankAccount destinyAccount, int transferAmount) {
         if (withdraw(transferAmount)) {
             deposit(destinyAccount, transferAmount);
         }
     }
-    
+
     public boolean findDestinyAccount(int destinyAgency, int destinyCheckingAccount) {
 
-        for (int count = 0; count < accountsList.length; count++) {  
-            
-            if (accountsList[count] != null){
-                if (destinyAgency == accountsList[count].getAgency()
-                        && destinyCheckingAccount == accountsList[count].getCheckingAccount()) {
-                    destinyIndex = count;  // TESTAR FAZENDO A VARIÁVEL "DESTINYINDEX" RECEBENDO O OBJETO, E NÃO SOMENTE O ÍNDICE.
+        for (BankAccount thisAccount : accountsList) {
+
+            if (thisAccount != null) {
+                if (destinyAgency == thisAccount.getAgency()
+                        && destinyCheckingAccount == thisAccount.getCheckingAccount()) {
+                    destinyAccount = thisAccount;
                     return true;
                 }
             }
