@@ -1,14 +1,14 @@
 # Inicia as variáveis soma_notas_alunos_impares e soma_notas_alunos_pares com o valor zero:
 soma_notas_alunos_impares = soma_notas_alunos_pares = 0
 
-# Executa um laço do tipo for de 1 à 49 pulando de 2 em 2, recebe como input as notas ímpares do usuário e
+# Executa um laço do tipo for de 1 a 49 pulando de 2 em 2, recebe como input as notas ímpares do usuário e
 # faz a soma total das notas na variável soma_notas_alunos_impares:
 for numero_aluno_impar in range(1, 50, 2):
     print("\nVOCÊ ESTÁ DIGITANDO AS NOTAS DOS ALUNOS ÍMPARES.")
     nota_aluno_impar = float(input(f"POR FAVOR, INSIRA A NOTA DO ALUNO DE NÚMERO {numero_aluno_impar}: "))
     soma_notas_alunos_impares += nota_aluno_impar
 
-# Executa um laço do tipo for de 2 à 50 pulando de 2 em 2, recebe como input as notas pares do usuário e
+# Executa um laço do tipo for de 2 a 50 pulando de 2 em 2, recebe como input as notas pares do usuário e
 # faz a soma total das notas na variável soma_notas_alunos_pares:
 for numero_aluno_par in range(2, 51, 2):
     print("\nVOCÊ ESTÁ DIGITANDO AS NOTAS DOS ALUNOS PARES.")
