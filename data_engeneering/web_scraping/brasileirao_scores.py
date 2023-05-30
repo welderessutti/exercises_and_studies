@@ -1,9 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
-import datetime
+from datetime import date
 
-today = datetime.date.today()
+today = date.today()
 
 url = "https://www.uol.com.br/esporte/futebol/campeonatos/brasileirao/"
 
