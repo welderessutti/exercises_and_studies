@@ -50,3 +50,13 @@ driver.quit()
 df = pd.DataFrame(np.array(team_stats_row), columns=column_names)
 
 print(df.to_string(index=False))
+
+brasileirao_dict = {"brasileirao": df.to_dict("records")}
+
+print(brasileirao_dict)
+
+today = date.today()
+
+js = json.dumps(brasileirao_dict, indent=4)
+with open(f"classificacao_brasileirao_{today}.json", "w", encoding="utf-8") as file:
+    file.write(js)
