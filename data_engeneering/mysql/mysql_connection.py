@@ -67,7 +67,7 @@ def insert_into(cursor_, db_name_, table_name_, json_file_):
 
 
 user = "root"
-password = "Luvmadoggos#1"
+password = "******"
 db_name = "brasileirao"
 table_name = f"classificacao_{date.today()}"
 file_name = f"classificacao_{date.today()}"
