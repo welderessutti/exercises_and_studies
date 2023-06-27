@@ -81,7 +81,7 @@ def create_dict(stats, headers):
 def create_json_file(brasileirao_dict):
     today = date.today()
     js = json.dumps(brasileirao_dict, indent=4)
-    with open(f"classificacao_brasileirao_{today}.json", "w", encoding="utf-8") as file:
+    with open(f"classificacao_{today}.json", "w", encoding="utf-8") as file:
         file.write(js)
 
 
