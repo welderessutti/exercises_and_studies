@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b90ada56-7fa4-4345-a0ff-8cc1747e0f40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/data_engeneering.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/mysql_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysql/mysql_connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web_scraping/brasileirao_web_scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_scraping/brasileirao_web_scraping.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +187,7 @@
       <workItem from="1684980085873" duration="6681000" />
       <workItem from="1685032515765" duration="29000" />
       <workItem from="1687819405802" duration="17416000" />
+      <workItem from="1689637525411" duration="763000" />
     </task>
     <servers />
   </component>
@@ -198,8 +196,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/data_engeneering$cep_api.coverage" NAME="cep_api Coverage Results" MODIFIED="1684893308634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_consumption/python" />
-    <SUITE FILE_PATH="coverage/data_engeneering$brasileirao_web_scraping.coverage" NAME="brasileirao_web_scraping Coverage Results" MODIFIED="1687834879014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scraping" />
-    <SUITE FILE_PATH="coverage/data_engeneering$mysql_connection.coverage" NAME="mysql_connection Coverage Results" MODIFIED="1687836454814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
+    <SUITE FILE_PATH="coverage/data_engeneering$brasileirao_web_scraping.coverage" NAME="brasileirao_web_scraping Coverage Results" MODIFIED="1689637968683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scraping" />
+    <SUITE FILE_PATH="coverage/data_engeneering$mysql_connection.coverage" NAME="mysql_connection Coverage Results" MODIFIED="1689638050386" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/mysql" />
     <SUITE FILE_PATH="coverage/data_engeneering$teste.coverage" NAME="teste Coverage Results" MODIFIED="1687826735081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/web_scraping" />
     <SUITE FILE_PATH="coverage/data_engeneering$aaa.coverage" NAME="aaa Coverage Results" MODIFIED="1684986229256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_consumption" />
     <SUITE FILE_PATH="coverage/data_engeneering$teste_csv_panddas.coverage" NAME="teste_csv_panddas Coverage Results" MODIFIED="1684986635512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/api_consumption" />
