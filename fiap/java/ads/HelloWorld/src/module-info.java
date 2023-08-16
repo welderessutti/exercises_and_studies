@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author welde
+ *
+ */
+module HelloWorld {
+}
