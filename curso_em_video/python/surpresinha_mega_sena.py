@@ -15,5 +15,5 @@ while True:
         print("Opção inválida. No mínino 1 jogo.\n")
 
 for c in range(0, jogos):
-    x = sample(range(1, 61), dezenas)
+    x = sample(range(1, 26), dezenas)
     print(x)
