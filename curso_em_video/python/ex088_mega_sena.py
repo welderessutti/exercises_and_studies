@@ -77,13 +77,20 @@ for c in range(0, jogos):
     lista_2.append([])
     cont = 0
 
-    while cont < 15:
-        while True:
-            sorteado = random.choice(loto3)
-            if sorteado not in lista_2[c]:
-                lista_2[c].append(sorteado)
+    while cont < 6:
+        sorteado = random.choice(mega1)
+        if sorteado not in lista_2[c]:
+            lista_2[c].append(sorteado)
+            cont += 1
+            if cont == 6:
                 break
-        cont += 1
+
+        sorteado2 = random.choice(mega4)
+        if sorteado2 not in lista_2[c]:
+            lista_2[c].append(sorteado2)
+            cont += 1
+            if cont == 6:
+                break
 
     lista_2[c].sort()
     sleep(1)
